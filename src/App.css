@@ -6,6 +6,7 @@ body {
   background: #0B2434;
   margin: 0;
   padding: 1em;
+  font-family: 'Karla', sans-serif;
 }
 
 main {
@@ -26,4 +27,21 @@ main {
   grid-template: auto auto / repeat(5, 1fr);
   margin: 0 1em;
   gap: 20px;
+}
+
+.btn-roll-dice {
+  background: #5035FF;
+  border: none;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  margin-top: 2em;
+  padding: 1em 2em;
+  color: #F5F5F5;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.2rem;
+}
+
+.btn-roll-dice:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }

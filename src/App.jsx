@@ -18,9 +18,17 @@ function App() {
     <Dice key={die.dieKey} value={die.dieNumber} />
   ))
 
+  const rollNewDices = () => {
+    const newDices = allNewDice()
+    setDiceArray(newDices)
+  }
+
   return (
     <main>
       <div className='container'>{diceElements}</div>
+      <button className='btn-roll-dice' type='button' onClick={rollNewDices}>
+        Roll dice
+      </button>
     </main>
   )
 }
