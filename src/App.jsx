@@ -7,15 +7,16 @@ function App() {
   const allNewDice = (diceCount = 10) => {
     const diceArray = [...Array(diceCount).keys()]
     return diceArray.map(id => ({
-      dieKey: id,
-      dieNumber: Math.floor(Math.random() * 6) + 1
+      id,
+      value: Math.floor(Math.random() * 6) + 1,
+      isHeld: false
     }))
   }
 
   const [diceArray, setDiceArray] = useState(allNewDice())
 
   const diceElements = diceArray.map(die => (
-    <Dice key={die.dieKey} value={die.dieNumber} />
+    <Dice key={die.id} value={die.value} isHeld={die.isHeld} />
   ))
 
   const rollNewDices = () => {
