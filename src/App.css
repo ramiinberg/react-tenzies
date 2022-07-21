@@ -1,1 +1,17 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  background: #0B2434;
+  margin: 0;
+  padding: 1em;
+}
+
+main {
+  border-radius: 0.3125em;
+  height: 400px;
+  max-width: 800px;
+  background: #F5F5F5;
+  margin: 0 auto;
+}

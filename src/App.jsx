@@ -1,7 +1,7 @@
 import './App.css'
 
 function App() {
-  return <h1>Placeholder</h1>
+  return <main>Placeholder</main>
 }
 
 export default App
