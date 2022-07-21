@@ -14,4 +14,16 @@ main {
   max-width: 800px;
   background: #F5F5F5;
   margin: 0 auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  margin: 0 1em;
+  gap: 20px;
 }
