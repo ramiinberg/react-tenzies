@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import './App.css'
 import Dice from './components/Dice'
@@ -15,6 +15,16 @@ function App() {
   }
 
   const [diceArray, setDiceArray] = useState(allNewDice())
+  const [tenzies, setTenzies] = useState(false)
+
+  useEffect(() => {
+    const allHeld = diceArray.every(die => die.isHeld)
+    const firstValue = diceArray[0].value
+    const allSameValue = diceArray.every(die => die.value === firstValue)
+    if (allHeld && allSameValue) {
+      setTenzies(true)
+    }
+  }, [diceArray])
 
   const holdDice = id => {
     setDiceArray(prevState =>
