@@ -51,6 +51,11 @@ function App() {
     )
   }
 
+  const newGame = () => {
+    setTenzies(false)
+    setDiceArray(allNewDice())
+  }
+
   return (
     <main>
       <h1 className='title'>Tenzies</h1>
@@ -59,7 +64,11 @@ function App() {
         current value between rolls.
       </p>
       <div className='container'>{diceElements}</div>
-      <button className='btn-roll-dice' type='button' onClick={rollNewDices}>
+      <button
+        className='btn-roll-dice'
+        type='button'
+        onClick={tenzies ? newGame : rollNewDices}
+      >
         {tenzies ? 'New game' : 'Roll dice'}
       </button>
       {tenzies && <Confetti />}
