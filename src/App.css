@@ -45,3 +45,15 @@ main {
 .btn-roll-dice:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
+
+.title {
+  font-size: 2.5rem;
+}
+
+.instructions {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 2em;
+  text-align: center;
+}
