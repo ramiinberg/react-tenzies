@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Confetti from 'react-confetti'
 
 import './App.css'
 import Dice from './components/Dice'
@@ -59,8 +60,9 @@ function App() {
       </p>
       <div className='container'>{diceElements}</div>
       <button className='btn-roll-dice' type='button' onClick={rollNewDices}>
-        Roll dice
+        {tenzies ? 'New game' : 'Roll dice'}
       </button>
+      {tenzies && <Confetti />}
     </main>
   )
 }
